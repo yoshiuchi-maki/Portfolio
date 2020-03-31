@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true"/>
+	<package name="portfolio.action" extends="struts-default">
+
+		<action name="PortfolioAction" class="portfolio.action.PortfolioAction" method="execute">
+			<result name="home">home.jsp</result>
+			<result name="html">htmlWorks.jsp</result>
+			<result name="php">phpWorks.jsp</result>
+			<result name="java">javaWorks.jsp</result>
+			<result name="about">about.jsp</result>
+		</action>
+
+		<action name="MasterAction" class="portfolio.action.MasterAction" method="execute">
+			<result name="master">master.jsp</result>
+			<result name="details">insertDetails.jsp</result>
+			<result name="confirm">confirm.jsp</result>
+			<result name="complete">complete.jsp</result>
+		</action>
+
+	</package>
+</struts>

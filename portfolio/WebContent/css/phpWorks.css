@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.contactForm {
+	clear: left;
+	margin-top: 40px;
+}
+
+table.contactForm-img, table.keijiban, table.mypage {
+	margin: 30px 0 40px 0;
+}
+
+table.contactForm-img img {
+	width: 350px;
+}
+
+table.keijiban-img img {
+	width: 430px;
+	padding: 0 20px;
+}
+
+table.mypage-img img {
+	height: 250px;
+	padding: 20px 20px 20px 10px;
+}
+
+.contactForm, .keijiban, .mypage {
+	width: 80%:
+	margin: 30xp 5%;
+}
+
+table.contactForm-img, table.keijiban-img {
+	width: 80%;
+	margin: 2% 10%;
+}
+
+table.mypage-img {
+	width: 60%;
+	margin: 2% 15%;
+}

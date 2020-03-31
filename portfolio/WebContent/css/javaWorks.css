@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.ecsite {
+	clear: left;
+}
+
+.ecsite, .team {
+	margin: 30xp 0 50px 0;
+}
+
+h4 {
+	margin: 0;
+	font-size: 15px;
+	position: relative;
+	font-weight: bold;
+	display: inline-block;
+	background-color: #feeaac;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 2px;
+}
+
+p {
+	margin:  0;
+	line-height: 2;
+}
+
+h4:before {
+	content: '';
+	background-color: #b3b3b3;
+	display: block;
+	position: absolute;
+	left: 50%;
+	height: 60%;
+	top: 26%;
+	z-index: -1;
+	width: 46%;
+	box-shadow: 0 0 8px 8px #b3b3b3;
+	transform: rotate(3deg);
+}
+
+strong {
+	font-size: 14px;
+	background: linear-gradient(transparent 60%, #FAE438 60%);
+}
+
+.ecsite img {
+	width: 330px;
+	padding: 10px 10px 0 10px;
+}
+
+table.ecsite-img, table.team-img {
+	width: 96%;
+	margin: 2%;
+}
+
+.team img {
+	width: 530px;
+	padding: 5px 10px;
+}
+
+.img span {
+	font-size: 14px;
+}

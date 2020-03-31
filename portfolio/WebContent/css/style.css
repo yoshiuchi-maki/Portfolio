@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-family: Verdana, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.header {
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	background-color: #F5FFFA;
+	box-shadow: 2px 2px 4px lightgray;
+}
+
+ul li {
+	float: left;
+	list-style: none;
+	padding: 0 10px;
+	font-size: 13px;
+}
+
+ul li:first-child {
+	margin-left: 30px;
+}
+
+.header ul li {
+	padding: 20px 10px;
+	font-size: 15px;
+	line-height: 80px;
+}
+
+.header ul li:last-child {
+	float: right;
+	margin-right: 20px;
+}
+
+.button {
+	display: block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	background-color: #00B285;
+	transition: all 0.3s;
+	position: relative;
+	z-index: 2;
+}
+
+.header .button:hover,
+.button:active {
+	color: #00B285;
+}
+
+.button:after {
+	width: 0%;
+	height: 100%;
+	border-radius: 5px;
+	background-color: #FFF;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.3s;
+	z-index: -1;
+}
+
+.button:hover:after,
+.button:active:after {
+	border: 2px solid #00B285;
+	width: 100%;
+}
+
+.main {
+	clear: left;
+	width: 98%;
+	margin-bottom: 20px;
+}
+
+h1 {
+	padding: 0.5em;
+	color: #010101;
+	background: #eaf3ff;
+	border-bottom: solid 3px #516ab6;
+	width: 96%;
+	text-align: center;
+	margin: 2%;
+}
+
+h2 {
+	position: relative;
+	padding: 0.8em;
+	background: #B92A2C;
+	color: #fff;
+	font-size: 1.143em;
+	font-weight: bold;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 300px;
+	margin: 8px auto;
+}
+
+.skills {
+	margin: 3% 15%;
+	width: 85%;
+}
+
+.skills img {
+	width: 95px;
+	margin: 10px 10px;
+}
+
+table.skills-table{
+	margin-right: 160px;
+}
+
+table.skills-table, table.works-table {
+	float: left;
+}
+
+table.skills-table strong, table.works-table strong {
+	font-size: 14px;
+	background: linear-gradient(transparent 60%, #FAE438 60%);
+}
+
+.about {
+	clear: left;
+	margin-bottom: 30px;
+}
+
+/* htmlWorks.jspへの適用 */
+.html img {
+	width: 500px;
+	margin: 20px;
+}
+
+/* マスターページへの適用 */
+table.master-table {
+	margin: 0 auto;
+}
+
+.next {
+	width: 20%;
+	margin: 0 40%;
+}
