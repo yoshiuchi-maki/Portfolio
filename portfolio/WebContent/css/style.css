@@ -133,14 +133,26 @@ table.skills-table, table.works-table {
 	float: left;
 }
 
-table.skills-table strong, table.works-table strong {
+strong {
 	font-size: 14px;
 	background: linear-gradient(transparent 60%, #FAE438 60%);
 }
 
+
 .about {
 	clear: left;
-	margin-bottom: 30px;
+}
+
+table.about-table {
+	text-align: initial;
+	width: 70%;
+	margin: 0 15% 30px 15%;
+	line-height: 2.2;
+}
+
+table.about-table th{
+	float: right;
+	background: linear-gradient(transparent 60%, #FFE4C4 60%);
 }
 
 /* htmlWorks.jspへの適用 */
@@ -158,3 +170,19 @@ table.master-table {
 	width: 20%;
 	margin: 0 40%;
 }
+
+/* about.jspへの適用 */
+.strength, table.chronicle-table, .hobby{
+	line-height: 2.2;
+	font-size: 12px;
+}
+
+table.chronicle-table {
+	text-align: initial;
+	width: 50%;
+	margin: 10px 20% 30px 30%;
+}
+
+table.chronicle-table th {
+	width: 80px;
+	}
