@@ -33,7 +33,7 @@
 			</tr>
 			<tr>
 				<th>2014</th>
-				<td><strong>10ヵ月間のアメリカ留学</strong>も経験</td>
+				<td><strong>10ヵ月間のアメリカ留学</strong>を経験</td>
 			</tr>
 			<tr>
 				<th>2016</th>
@@ -49,7 +49,7 @@
 			</tr>
 			<tr>
 				<th>現在</th>
-				<td><strong>今までの経験や自分の性格を生かす</strong>ことができる分野で、成長を実感</td>
+				<td><strong>今までの経験や自分の性格を生かす</strong>ことができる分野で、成長を実感中</td>
 			</tr>
 		</table>
 

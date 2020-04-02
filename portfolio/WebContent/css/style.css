@@ -86,7 +86,7 @@ ul li:first-child {
 }
 
 .main {
-	clear: left;
+	clear: both;
 	width: 98%;
 	margin-bottom: 20px;
 }
@@ -125,7 +125,7 @@ h2 {
 	margin: 10px 10px;
 }
 
-table.skills-table{
+table.skills-table {
 	margin-right: 160px;
 }
 
@@ -137,7 +137,6 @@ strong {
 	font-size: 14px;
 	background: linear-gradient(transparent 60%, #FAE438 60%);
 }
-
 
 .about {
 	clear: left;
@@ -172,7 +171,7 @@ table.master-table {
 }
 
 /* about.jspへの適用 */
-.strength, table.chronicle-table, .hobby{
+.strength, table.chronicle-table, .hobby {
 	line-height: 2.2;
 	font-size: 12px;
 }
@@ -185,4 +184,4 @@ table.chronicle-table {
 
 table.chronicle-table th {
 	width: 80px;
-	}
+}

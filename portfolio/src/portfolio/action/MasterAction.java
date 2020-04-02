@@ -1,6 +1,9 @@
 package portfolio.action;
 
 import java.util.List;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -8,16 +11,17 @@ import portfolio.dao.SkillsDAO;
 import portfolio.dao.WorksDAO;
 import portfolioDTO.SkillsDTO;
 
-public class MasterAction extends ActionSupport {
+public class MasterAction extends ActionSupport implements SessionAware {
 
 	private List<SkillsDTO> skillsList;
 	private int transitionFlg;
-	private int skillsId;
+	private String language;
 	private String productionName;
 	private String productionHours;
 	private String thumbnailsFileName;
 	private String functionName;
 	private String pictureFileName;
+	private Map<String, Object> session;
 
 	public String execute() {
 
@@ -30,17 +34,46 @@ public class MasterAction extends ActionSupport {
 		}
 
 		if(transitionFlg == 6) {
+			if(language.equals("HTML/CSS")) {
+				session.put("skillsId", 1);
+			} else if(language.equals("JavaScript")) {
+				session.put("skillsId", 2);
+			} else if(language.equals("PHP")) {
+				session.put("skillsId", 3);
+			} else if(language.equals("Java")) {
+				session.put("skillsId", 4);
+			}
+
+			session.put("language", language);
+			session.put("productionName", productionName);
+			session.put("productionHours", productionHours);
+			session.put("thumbnailsFileName", thumbnailsFileName);
 			ret = "details";
 		}
 
 		if(transitionFlg == 7) {
+			session.put("functionName", functionName);
+			session.put("pictureFileName", pictureFileName);
 			ret = "confirm";
 		}
 
 		if(transitionFlg == 8) {
 			String imagesFilePath = "./images";
 			WorksDAO worksDAO = new WorksDAO();
-			worksDAO.insertNewWorks(skillsId, productionName, productionHours, imagesFilePath, thumbnailsFileName);
+			worksDAO.insertNewWorks(Integer.parseInt(session.get("skillsId").toString()),
+					session.get("productionName").toString(),
+					session.get("productionHours").toString(),
+					imagesFilePath,
+					session.get("thumbnailsFileName").toString());
+
+			session.remove("skillsId");
+			session.remove("language");
+			session.remove("productionName");
+			session.remove("productionHours");
+			session.remove("thumbnailsFileName");
+			session.remove("functionName");
+			session.remove("pictureFileName");
+
 			ret = "complete";
 		}
 
@@ -59,12 +92,12 @@ public class MasterAction extends ActionSupport {
 		this.transitionFlg = transitionFlg;
 	}
 
-	public int getSkillsId() {
-		return skillsId;
+	public String getLanguage() {
+		return language;
 	}
 
-	public void setSkillsId(int skillsId) {
-		this.skillsId = skillsId;
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 
 	public String getProductionName() {
@@ -105,6 +138,14 @@ public class MasterAction extends ActionSupport {
 
 	public void setPictureFileName(String pictureFileName) {
 		this.pictureFileName = pictureFileName;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
 	}
 
 }

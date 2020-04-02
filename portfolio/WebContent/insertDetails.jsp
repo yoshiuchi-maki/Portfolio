@@ -20,33 +20,29 @@
 			<table class="master-table">
 				<tr>
 					<th>言語：</th>
-					<td><s:property value="skillsId"/></td>
+					<td><s:property value="#session.language"/></td>
 				</tr>
 				<tr>
 					<th>作品名：</th>
-					<td><s:property value="productionName"/></td>
+					<td><s:property value="#session.productionName"/></td>
 				</tr>
 				<tr>
 					<th>製作時間：</th>
-					<td><s:property value="productionHours"/></td>
+					<td><s:property value="#session.productionHours"/></td>
 				</tr>
 				<tr>
-					<th>TOP表示する画像ファイル名：<th>
-					<td><s:property value="thumbnailsFileName"/></td>
+					<th>TOP表示する画像ファイル名：</th>
+					<td><s:property value="#session.thumbnailsFileName"/></td>
 				</tr>
-
 				<tr>
 					<th>機能名：</th>
-					<td><s:textfield name="functionName"/></td>
-					<th>画像ファイル名：</th>
-					<td><s:textfield name="pictureFileName" placeholder="XXXX.jpg"/></td>
+					<td><input type="text" name="functionName"/></td>
 				</tr>
+				<tr>
+					<th>画像ファイル名：</th>
+					<td><input type="text" name="pictureFileName"  placeholder="XXXX.jpg"/></td>
 			</table>
 
-			<input type="hidden" name="skillsId" value='<s:property value="skillsId"/>'/>
-			<input type="hidden" name="productionName" value='<s:property value="productionName"/>'/>
-			<input type="hidden" name="productionHours" value="<s:property value="productionHours"/>"/>
-			<input type="hidden" name="thumbnailsFileName" value="<s:property value="thumbnailsFileName"/>"/>
 			<input type="hidden" name="transitionFlg" value="7"/>
 
 			<div class="next">

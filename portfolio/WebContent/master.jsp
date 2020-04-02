@@ -20,21 +20,29 @@
 			<table class="master-table">
 				<tr>
 					<th>言語：</th>
-					<td><s:select name="skillsId" list="skillsList" listKey="id" listValue="language"/></td>
+					<td>
+						<select name="language">
+							<s:iterator value="skillsList">
+					 			<option value='<s:property value="language"/>'><s:property value="language"/></option>
+					 		</s:iterator>
+				 		</select>
+					</td>
+
 				</tr>
 				<tr>
 					<th>作品名：</th>
-					<td><s:textfield name="productionName"/></td>
+					<td><input type="text" name="productionName"/></td>
 				</tr>
 				<tr>
 					<th>製作時間：</th>
-					<td><s:textfield name="productionHours"/></td>
+					<td><input type="text" name="productionHours"/></td>
 				</tr>
 				<tr>
-					<th>TOP表示する画像ファイル名：<th>
-					<td><s:textfield name="thumbnailsFileName" placeholder="XXXX.jpg"/></td>
+					<th>TOP表示する画像ファイル名：</th>
+					<td><input type="text" name="thumbnailsFileName" placeholder="XXXX.jpg"/></td>
 				</tr>
 			</table>
+
 			<input type="hidden" name="transitionFlg" value="6"/>
 
 			<div class="next">
