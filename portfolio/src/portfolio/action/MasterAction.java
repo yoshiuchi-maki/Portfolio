@@ -15,6 +15,7 @@ public class MasterAction extends ActionSupport implements SessionAware {
 
 	private List<SkillsDTO> skillsList;
 	private int transitionFlg;
+	private String errorMessage;
 	private String language;
 	private String productionName;
 	private String productionHours;
@@ -34,27 +35,45 @@ public class MasterAction extends ActionSupport implements SessionAware {
 		}
 
 		if(transitionFlg == 6) {
-			if(language.equals("HTML/CSS")) {
-				session.put("skillsId", 1);
-			} else if(language.equals("JavaScript")) {
-				session.put("skillsId", 2);
-			} else if(language.equals("PHP")) {
-				session.put("skillsId", 3);
-			} else if(language.equals("Java")) {
-				session.put("skillsId", 4);
-			}
 
-			session.put("language", language);
-			session.put("productionName", productionName);
-			session.put("productionHours", productionHours);
-			session.put("thumbnailsFileName", thumbnailsFileName);
-			ret = "details";
+			if(!(productionName.equals("")) && !(productionHours.equals("")) && !(thumbnailsFileName.equals(""))) {
+
+				session.put("language", language);
+				session.put("productionName", productionName);
+				session.put("productionHours", productionHours);
+				session.put("thumbnailsFileName", thumbnailsFileName);
+
+				if(language.equals("HTML/CSS")) {
+					session.put("skillsId", 1);
+				} else if(language.equals("JavaScript")) {
+					session.put("skillsId", 2);
+				} else if(language.equals("PHP")) {
+					session.put("skillsId", 3);
+				} else if(language.equals("Java")) {
+					session.put("skillsId", 4);
+				}
+
+				ret = "details";
+
+			} else {
+				setErrorMessage("未入力の項目があります");
+				SkillsDAO skillsDAO = new SkillsDAO();
+				skillsList = skillsDAO.skillsList();
+				ret = "master";
+			}
 		}
 
 		if(transitionFlg == 7) {
-			session.put("functionName", functionName);
-			session.put("pictureFileName", pictureFileName);
-			ret = "confirm";
+
+			if(!(functionName.equals("")) && !(pictureFileName.equals(""))) {
+				session.put("functionName", functionName);
+				session.put("pictureFileName", pictureFileName);
+				ret = "confirm";
+
+			} else {
+				setErrorMessage("未入力の項目があります");
+				ret ="details";
+			}
 		}
 
 		if(transitionFlg == 8) {
@@ -90,6 +109,14 @@ public class MasterAction extends ActionSupport implements SessionAware {
 
 	public void setTransitionFlg(int transitionFlg) {
 		this.transitionFlg = transitionFlg;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
 	}
 
 	public String getLanguage() {

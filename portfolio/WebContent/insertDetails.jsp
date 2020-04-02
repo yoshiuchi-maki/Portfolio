@@ -16,6 +16,10 @@
 		<h1>管理者画面</h1>
 		<h2>機能の追加</h2>
 
+		<s:if test="errorMessage != null">
+			<font color="red"><s:property value="errorMessage"/></font>
+		</s:if>
+
 		<s:form action="MasterAction">
 			<table class="master-table">
 				<tr>

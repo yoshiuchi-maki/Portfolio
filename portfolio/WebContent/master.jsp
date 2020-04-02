@@ -15,6 +15,12 @@
 
 		<h1>管理者画面</h1>
 		<h2>新規作品の登録</h2>
+		<p>トップ画面に作品を追加する</p>
+		<br>
+
+		<s:if test="errorMessage != null">
+			<font color="red"><s:property value="errorMessage"/></font>
+		</s:if>
 
 		<s:form action="MasterAction">
 			<table class="master-table">

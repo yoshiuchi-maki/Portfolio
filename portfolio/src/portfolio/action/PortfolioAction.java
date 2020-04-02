@@ -19,7 +19,6 @@ public class PortfolioAction extends ActionSupport {
 	private List<ImagesDTO> keijibanImagesList;
 	private List<ImagesDTO> mypageImagesList;
 	private List<ImagesDTO> ecsiteImagesList;
-	private List<ImagesDTO> teamEcsiteImagesList;
 	private int transitionFlg;
 	private int skillsTransitionFlg;
 
@@ -52,7 +51,6 @@ public class PortfolioAction extends ActionSupport {
 		if(transitionFlg == 3 || skillsTransitionFlg == 4) {
 			ImagesDAO imagesDAO = new ImagesDAO();
 			ecsiteImagesList = imagesDAO.imagesList(5);
-			teamEcsiteImagesList = imagesDAO.imagesList(6);
 			ret = "java";
 		}
 
@@ -85,10 +83,6 @@ public class PortfolioAction extends ActionSupport {
 
 	public List<ImagesDTO> getEcsiteImagesList() {
 		return ecsiteImagesList;
-	}
-
-	public List<ImagesDTO> getTeamEcsiteImagesList() {
-		return teamEcsiteImagesList;
 	}
 
 	public int getTransitionFlg() {
