@@ -5,8 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import portfolio.dto.FunctionDTO;
 import portfolio.util.DBConnector;
-import portfolioDTO.FunctionDTO;
 
 public class FunctionDAO {
 

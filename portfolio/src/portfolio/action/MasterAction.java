@@ -9,7 +9,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import portfolio.dao.SkillsDAO;
 import portfolio.dao.WorksDAO;
-import portfolioDTO.SkillsDTO;
+import portfolio.dto.SkillsDTO;
 
 public class MasterAction extends ActionSupport implements SessionAware {
 

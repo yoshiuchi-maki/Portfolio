@@ -7,8 +7,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import portfolio.dto.SkillsDTO;
 import portfolio.util.DBConnector;
-import portfolioDTO.SkillsDTO;
 
 public class SkillsDAO {
 

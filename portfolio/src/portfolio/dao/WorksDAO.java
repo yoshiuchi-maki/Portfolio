@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import portfolio.dto.WorksDTO;
 import portfolio.util.DBConnector;
-import portfolioDTO.WorksDTO;
 
 public class WorksDAO {
 

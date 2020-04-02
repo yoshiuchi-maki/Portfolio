@@ -1,4 +1,4 @@
-package portfolioDTO;
+package portfolio.dto;
 
 public class WorksDTO {
 

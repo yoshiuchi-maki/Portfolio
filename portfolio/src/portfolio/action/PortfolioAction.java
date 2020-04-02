@@ -7,9 +7,9 @@ import com.opensymphony.xwork2.ActionSupport;
 import portfolio.dao.ImagesDAO;
 import portfolio.dao.SkillsDAO;
 import portfolio.dao.WorksDAO;
-import portfolioDTO.ImagesDTO;
-import portfolioDTO.SkillsDTO;
-import portfolioDTO.WorksDTO;
+import portfolio.dto.ImagesDTO;
+import portfolio.dto.SkillsDTO;
+import portfolio.dto.WorksDTO;
 
 public class PortfolioAction extends ActionSupport {
 
